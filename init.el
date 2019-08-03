@@ -1,32 +1,24 @@
+;;指定模块存放的root目录
 (add-to-list 'load-path "~/.emacs.d/lisp")
-;;声明打开偏好设置文件的函数
+
+
+;;emacs构造器模块，在这里创建复用率极高的方法
+;;或通过init-func.el来管理，在(require 'init-func)
+;;例如：打开偏好设置文件的函数，该函数在keybindings.el绑定了F2快捷键
 (defun open-my-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
-
+;;其他模块分别是：packages/UI/org/better/keybingdings
 (require 'init-packages)
 (require 'init-ui)   
 (require 'init-org)
 (require 'init-better-default)
 (require 'init-keybindings) 
 
-(global-set-key (kbd "<f2>") 'open-my-init-file)
  
 (put 'upcase-region 'disabled nil)
 
+(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
+(load-file custom-file)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-idle-delay 0.08)
- '(company-minimum-prefix-length 1)
- '(package-selected-packages (quote (monokai-theme company hungry-delete))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

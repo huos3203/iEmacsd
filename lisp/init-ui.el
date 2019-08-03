@@ -18,7 +18,7 @@
 (setq inhibit-splash-screen t)
 ;;设置光标样式
 (setq-default cursor-type 'bar)
-
-(setq initial-frame-alist (quote (fullscreen . maximized)))
+;;启动全屏显示
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
 
 (provide 'init-ui)
