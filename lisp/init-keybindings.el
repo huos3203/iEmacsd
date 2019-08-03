@@ -21,4 +21,10 @@
 ;;查找关键字
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
+;;快速查找版本库管理的文件
+(global-set-key (kbd "C-c p f") 'counsel-git)
+
+;;org-mode
+(global-set-key (kbd "C-c a") 'org-agenda)
+
 (provide 'init-keybindings)
