@@ -1,26 +1,12 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'init-packages)
+(require 'init-ui)   
 
-;;加载样式
-
-;;隐藏tool bar
-(tool-bar-mode -1)
-;;(scroll-bar-mode -1)
-(electric-indent-mode 1)
-;;开启行号
-(global-linum-mode t)
-;;关闭启动画面
-(setq inhibit-splash-screen t)
-(setq-default cursor-type 'bar)
 ;;历史记录
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
-
-;;自动补齐
-(global-company-mode t)
-;;安装插件工具
 
 ;;禁止备份文件
 (setq make-backup-files nil)
@@ -29,22 +15,8 @@
 (setq org-src-fontify-natively t)
 ;;激活删除后输入文本
 (delete-selection-mode t)
-;;开启自动匹配小括号高亮
-(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-;;当前行高亮
-(global-hl-line-mode t)3
-;;加载monokai主题样式
-(load-theme 'monokai t)
-;;一键删除多余空格
-(require 'hungry-delete)
-(global-hungry-delete-mode)
-;;增强M-x功能的插件smex
-;(require 'smex)
-;(smex-initialize)
-;(global-set-key (kbd "M-x") 'smex)
-;;swiper 增强搜索功能mini窗口
-(ivy-mode 1)
-(setq ivy-use-virtual-buffers t)
+
+;;智能搜索功能mini buffer窗口
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
@@ -60,22 +32,6 @@
 ;;查找关键字
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)
 
-
-;;自动补齐括号
-(require 'smartparens-config)
-;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
-;;全局模式
-(smartparens-global-mode t)
-;;设置扩张名默认打开方式
-(setq auto-mode-alist
-	  (append
-	   '(("\\.js\\'" . js2-mode))
-	   auto-mode-alist))
-;;安装js驱动器nodejs
-(require 'nodejs-repl)
-;;指定node驱动器路径
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
 
 ;;org-mode配置org-agenda工作目录
 (setq org-agenda-files '("~/hsg/hexo/org"))

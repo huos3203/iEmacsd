@@ -42,7 +42,7 @@
 (global-company-mode t)
 
 ;;自动补齐括号
-(require 'smartparens-config)
+;;(require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局模式
 (smartparens-global-mode t)
@@ -59,7 +59,7 @@
 (popwin-mode t)
 
 ;;一键删除多余空格
-(require 'hungry-delete)
+;;(require 'hungry-delete)
 (global-hungry-delete-mode)
 
 
