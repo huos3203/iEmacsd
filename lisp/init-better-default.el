@@ -2,14 +2,16 @@
 (setq ring-bell-function 'ignore)
 ;;
 ;;buffer历史记录
-(require 'recentf)
+;;(require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 ;;禁止备份文件
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+;;开启删除选中文本模式
+(delete-selection-mode t)
+
 
 ;;开启自动匹配小括号高亮
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
