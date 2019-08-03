@@ -1,44 +1,10 @@
-(when (>= emacs-major-version 24)
-    (require 'package)
-    (package-initialize)
-    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-    )
-
-(require 'cl)
-
-;;add whatever packages you want here
-(defvar zilongshanren/packages '(
-				   company
-				   monokai-theme
-				   hungry-delete
-				  ; smex
-				   swiper
-                                   counsel
-				   smartparens
-				   js2-mode
-				   nodejs-repl
-				   exec-path-from-shell
-				   
-				   )  "Default packages")
-
-(setq package-selected-packages zilongshanren/packages)
-
-(defun zilongshanren/packages-installed-p ()
-    (loop for pkg in zilongshanren/packages
-          when (not (package-installed-p pkg)) do (return nil)
-          finally (return t)))
-
-(unless (zilongshanren/packages-installed-p)
-    (message "%s" "Refreshing package database...")
-    (package-refresh-contents)
-    (dolist (pkg zilongshanren/packages)
-      (when (not (package-installed-p pkg))
-        (package-install pkg))))
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(require 'init-packages)
 
 ;;加载样式
 
 ;;隐藏tool bar
-;;(tool-bar-mode -1)
+(tool-bar-mode -1)
 ;;(scroll-bar-mode -1)
 (electric-indent-mode 1)
 ;;开启行号
