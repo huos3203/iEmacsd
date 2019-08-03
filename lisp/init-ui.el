@@ -1,4 +1,4 @@
-;;模块化管理emacs主题样式的配置
+;;模块化管emacs主题样式的配置
 
 ;;隐藏tool bar
 (tool-bar-mode -1)
@@ -19,6 +19,6 @@
 ;;设置光标样式
 (setq-default cursor-type 'bar)
 
-(setq initial-frame-alist (quote (fullscreen . maxinized)))
+(setq initial-frame-alist (quote (fullscreen . maximized)))
 
 (provide 'init-ui)
