@@ -13,8 +13,8 @@
 ;; ----- smex-data -----
 (
  (counsel-git . 1)
- (customize-group . 6)
+ (customize-group . 9)
  (eval-buffer . 1)
  (org-pomodoro . 4)
- (package-list-packages . 9)
+ (package-list-packages . 11)
 )
