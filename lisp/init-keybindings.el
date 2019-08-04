@@ -26,5 +26,7 @@
 
 ;;org-mode
 (global-set-key (kbd "C-c a") 'org-agenda)
+;;remmber记事本
+(global-set-key (kbd "C-c r") 'org-capture)
 
 (provide 'init-keybindings)

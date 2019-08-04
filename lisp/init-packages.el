@@ -5,6 +5,8 @@
     (require 'package)
     (package-initialize)
     (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+    ;;(add-to-list 'package-archives '("popkit" . "http://elpa.popkit.org/packages") t)
+    ;;(setq package-archives '(("popkit" . "http://elpa.popkit.org/packages")))
     )
 
 (require 'cl)
@@ -16,12 +18,13 @@
 				   hungry-delete
 				  ; smex
 				   swiper
-                   counsel
+				   counsel
 				   smartparens
 				   js2-mode
 				   nodejs-repl
 				   exec-path-from-shell
-                   popwin				   
+				   popwin
+				   org-pomodoro
 				   )  "Default packages")
 
 (setq package-selected-packages zilongshanren/packages)
@@ -71,6 +74,8 @@
 
 ;;安装js驱动器nodejs
 (require 'nodejs-repl)
+;;org
+(require 'org-pomodoro)
 ;;指定node驱动器路径
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))

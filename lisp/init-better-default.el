@@ -1,3 +1,5 @@
+;;设置系统编码
+(set-language-environment "UTF-8")
 ;;禁止音效
 (setq ring-bell-function 'ignore)
 ;;
