@@ -16,5 +16,5 @@
  (customize-group . 4)
  (eval-buffer . 1)
  (org-pomodoro . 4)
- (package-list-packages . 8)
+ (package-list-packages . 9)
 )
