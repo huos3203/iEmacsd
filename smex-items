@@ -1,21 +1,25 @@
 
 ;; ----- smex-history -----
 (
+ pallet-install
+ pallet-init
+ pallet-mode
+ package-list-packages
+ package-install
  customize-group
  evil-leader-mode
- package-list-packages
- org-pomodoro
- eval-buffer
- counsel-git
- cd
 )
 
 ;; ----- smex-data -----
 (
  (counsel-git . 1)
- (customize-group . 10)
+ (customize-group . 11)
  (eval-buffer . 1)
  (org-pomodoro . 4)
- (package-list-packages . 11)
+ (package-list-packages . 13)
  (evil-leader-mode . 2)
+ (package-install . 1)
+ (pallet-mode . 2)
+ (pallet-install . 4)
+ (pallet-init . 1)
 )

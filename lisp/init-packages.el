@@ -1,12 +1,14 @@
-;;模块化管理第三方packages的相关配置
+ ;;模块化管理第三方packages的相关配置
 ;; 
 ;;配置插件源：M-x packages-list-packages
 (when (>= emacs-major-version 24)
     (require 'package)
     (package-initialize)
-    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
-    ;;(add-to-list 'package-archives '("popkit" . "http://elpa.popkit.org/packages") t)
-    ;;(setq package-archives '(("popkit" . "http://elpa.popkit.org/packages")))
+    ;;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+    (setq package-archives '(
+	 ;; ("popkit" . "http://elpa.popkit.org/packages")
+	 ("melpa" . "http://elpa.zilongshanren.com/melpa/")
+     ))
     )
 
 (require 'cl)
@@ -31,6 +33,7 @@
 				   evil-nerd-commenter
 				   ;; powerline
 				   which-key
+				   ;; mwe-log-commends ;;库已不存在
 				   )  "Default packages")
 
 (setq package-selected-packages zilongshanren/packages)

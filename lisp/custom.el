@@ -12,7 +12,7 @@
  '(org-pomodoro-long-break-length 40)
  '(package-selected-packages
    (quote
-    (evil-nerd-commenter evil-surround powerline evil-leader evil-ledger org-evil monokai-theme company hungry-delete)))
+    (popwin s shut-up smartparens smex swiper which-key window-numbering pallet evil-nerd-commenter evil-surround powerline evil-leader evil-ledger org-evil monokai-theme company hungry-delete)))
  '(which-key-frame-max-height 60))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
