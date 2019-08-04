@@ -1,20 +1,21 @@
 
 ;; ----- smex-history -----
 (
- package-list-packages
  customize-group
+ evil-leader-mode
+ package-list-packages
  org-pomodoro
  eval-buffer
  counsel-git
  cd
- 5x5
 )
 
 ;; ----- smex-data -----
 (
  (counsel-git . 1)
- (customize-group . 9)
+ (customize-group . 10)
  (eval-buffer . 1)
  (org-pomodoro . 4)
- (package-list-packages . 14)
+ (package-list-packages . 11)
+ (evil-leader-mode . 2)
 )

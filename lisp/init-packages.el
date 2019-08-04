@@ -27,9 +27,10 @@
 				   evil
 				   evil-leader
 				   window-numbering
-				   powerline
 				   evil-surround
 				   evil-nerd-commenter
+				   ;; powerline
+				   which-key
 				   )  "Default packages")
 
 (setq package-selected-packages zilongshanren/packages)
@@ -116,9 +117,30 @@
 
 ;;窗口切换插件
 (window-numbering-mode 1)
-;;设置linebar 样式
-(require 'powerline)
-(powerline-default-theme)
+
+;;设置linebar 样式 无法显示窗口编号，暂时移除
+;; (require 'powerline)
+;; (powerline-default-theme)
+
+;;指定某些模式：org-mode默认开启的emacs模式
+(dolist (mode '(ag-mode
+                  flycheck-error-list-mode
+                  git-rebase-mode))
+   (add-to-list 'evil-emacs-state-modes mode))
+
+(add-hook 'occur-mode-hook
+            (lambda ()
+              (evil-add-hjkl-bindings occur-mode-map 'emacs
+                (kbd "/")       'evil-search-forward
+                (kbd "n")       'evil-search-next
+                (kbd "N")       'evil-search-previous
+                (kbd "C-d")     'evil-scroll-down
+                (kbd "C-u")     'evil-scroll-up
+                )))
+
+;;which-key
+(which-key-mode 1)
+(setq which-key-side-window-location 'bottom)
 
 ;;指定node驱动器路径
 (when (memq window-system '(mac ns))
