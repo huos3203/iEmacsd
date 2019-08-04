@@ -25,7 +25,7 @@
 				   exec-path-from-shell
 				   popwin
 				   org-pomodoro
-                   evil
+				   evil
 				   )  "Default packages")
 
 (setq package-selected-packages zilongshanren/packages)
@@ -77,6 +77,12 @@
 (require 'nodejs-repl)
 ;;org
 (require 'org-pomodoro)
+;;开启evil模式
+(evil-mode 1)
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+;;设置C-u支持向上翻页,手动设置无效，采用customize-group evil偏好设置
+;;(setq evil-want-C-u-scroll t)
 ;;指定node驱动器路径
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))

@@ -7,8 +7,11 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
  '(company-minimum-prefix-length 1)
+ '(evil-want-C-u-scroll t)
  '(org-pomodoro-long-break-length 40)
- '(package-selected-packages (quote (org-evil monokai-theme company hungry-delete))))
+ '(package-selected-packages
+   (quote
+    (evil-ledger org-evil monokai-theme company hungry-delete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

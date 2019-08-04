@@ -1,8 +1,8 @@
 
 ;; ----- smex-history -----
 (
- package-list-packages
  customize-group
+ package-list-packages
  org-pomodoro
  eval-buffer
  counsel-git
@@ -13,7 +13,7 @@
 ;; ----- smex-data -----
 (
  (counsel-git . 1)
- (customize-group . 4)
+ (customize-group . 6)
  (eval-buffer . 1)
  (org-pomodoro . 4)
  (package-list-packages . 9)
