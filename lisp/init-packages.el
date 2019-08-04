@@ -10,7 +10,6 @@
     )
 
 (require 'cl)
-
 ;;add whatever packages you want here
 (defvar zilongshanren/packages '(
 				   company
@@ -27,6 +26,8 @@
 				   org-pomodoro
 				   evil
 				   evil-leader
+				   window-numbering
+				   powerline
 				   )  "Default packages")
 
 (setq package-selected-packages zilongshanren/packages)
@@ -88,9 +89,23 @@
 ;;定义leader,手动加载evil-mode方法：M-x evil-leader RET
 (global-evil-leader-mode)
 (evil-leader/set-key
-  "e" 'find-file
-  "b" 'switch-to-buffer
-  "k" 'kill-buffer)
+  "ff" 'find-file
+  "bb" 'switch-to-buffer
+  "bk" 'kill-buffer
+  "1" 'select-window-1
+  "2" 'select-window-2
+  "3" 'select-window-3
+  "4" 'select-window-4
+  "w/" 'split-window-right
+  "w-" 'split-window-below
+  ":" 'counsel-M-x
+  "wm" 'delete-other-windows) 
+
+;;窗口切换插件
+(window-numbering-mode 1)
+;;设置linebar 样式
+(require 'powerline)
+(powerline-default-theme)
 
 ;;指定node驱动器路径
 (when (memq window-system '(mac ns))
