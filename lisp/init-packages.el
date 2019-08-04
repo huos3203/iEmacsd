@@ -25,6 +25,7 @@
 				   exec-path-from-shell
 				   popwin
 				   org-pomodoro
+                   evil
 				   )  "Default packages")
 
 (setq package-selected-packages zilongshanren/packages)
