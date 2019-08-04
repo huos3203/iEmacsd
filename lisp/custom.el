@@ -12,7 +12,7 @@
  '(org-pomodoro-long-break-length 40)
  '(package-selected-packages
    (quote
-    (powerline evil-leader evil-ledger org-evil monokai-theme company hungry-delete))))
+    (evil-nerd-commenter evil-surround powerline evil-leader evil-ledger org-evil monokai-theme company hungry-delete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

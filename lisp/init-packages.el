@@ -28,6 +28,8 @@
 				   evil-leader
 				   window-numbering
 				   powerline
+				   evil-surround
+				   evil-nerd-commenter
 				   )  "Default packages")
 
 (setq package-selected-packages zilongshanren/packages)
@@ -90,9 +92,12 @@
 (global-evil-leader-mode)
 (evil-leader/set-key
   "ff" 'find-file
+  "fr" 'recentf-open-files
+  "fs" 'save-buffer
+  "pf" 'counsel-git
   "bb" 'switch-to-buffer
   "bk" 'kill-buffer
-  "1" 'select-window-1
+  "1" ' select-window-1
   "2" 'select-window-2
   "3" 'select-window-3
   "4" 'select-window-4
@@ -100,6 +105,14 @@
   "w-" 'split-window-below
   ":" 'counsel-M-x
   "wm" 'delete-other-windows) 
+
+;;快速给文本添加括号
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+;;多行注释插件
+(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(evilnc-default-hotkeys) 
 
 ;;窗口切换插件
 (window-numbering-mode 1)
