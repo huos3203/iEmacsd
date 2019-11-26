@@ -92,6 +92,11 @@
 ;;设置C-u支持向上翻页,手动设置无效，采用customize-group evil偏好设置
 ;;(setq evil-want-C-u-scroll t)
 
+(require 'lsp-sourcekit)
+(setenv "SOURCEKIT_TOOLCHAIN_PATH" "/Library/Developer/Toolchains/swift-latest.xctoolchain")
+(setq lsp-sourcekit-executable (expand-file-name "/usr/local/bin/sourcekit-lsp"))
+
+
 ;;定义leader,手动加载evil-mode方法：M-x evil-leader RET
 (global-evil-leader-mode)
 (evil-leader/set-key
